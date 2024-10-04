@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+header {
+    background-image: url("../src/images/bg-velo-header.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -500px;
+}
+
+header > div {
+    background-color: rgb(0, 0, 0, 65%);
+}
