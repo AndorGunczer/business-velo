@@ -554,8 +554,114 @@ video {
   display: none;
 }
 
+.m-4 {
+  margin: 1rem;
+}
+
+.mx-24 {
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .box-border {
   box-sizing: border-box;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-48 {
+  height: 12rem;
+}
+
+.h-60 {
+  height: 15rem;
+}
+
+.h-96 {
+  height: 24rem;
+}
+
+.w-32 {
+  width: 8rem;
+}
+
+.w-40 {
+  width: 10rem;
+}
+
+.w-48 {
+  width: 12rem;
+}
+
+.w-60 {
+  width: 15rem;
+}
+
+.w-72 {
+  width: 18rem;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.content-center {
+  align-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.self-center {
+  align-self: center;
 }
 
 .rounded {
@@ -566,13 +672,96 @@ video {
   border-width: 2px;
 }
 
+.border-b-4 {
+  border-bottom-width: 4px;
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.bg-calm-green {
+  --tw-bg-opacity: 1;
+  background-color: rgb(92 110 92 / var(--tw-bg-opacity));
+}
+
 .bg-green-button {
   --tw-bg-opacity: 1;
   background-color: rgb(0 115 0 / var(--tw-bg-opacity));
 }
 
+.bg-grey-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.bg-velo-kaki {
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 226 215 / var(--tw-bg-opacity));
+}
+
+.bg-footer-green {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 42 37 / var(--tw-bg-opacity));
+}
+
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.p-10 {
+  padding: 2.5rem;
+}
+
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.pb-12 {
+  padding-bottom: 3rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .text-white {
@@ -580,13 +769,78 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.opacity-65 {
+  opacity: 0.65;
+}
+
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+:root {
+  --image-width: 150px;
+  --image-height: 150px;
+  --picture-amount: 4;
+  --picture-whitespace: 25px;
+  --logos-width: calc((var(--picture-amount) * var(--picture-whitespace)) + (var(--image-width) * var(--picture-amount)));
+}
+
 header {
-  background-image: url("../src/images/bg-velo-header.png");
+  background-image: url("../src/images/bg-velo-header.JPG");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: -500px;
+  background-position-y: center center;
 }
 
 header > div {
   background-color: rgb(0, 0, 0, 65%);
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-103%);
+    /* 100 on pc */
+  }
+}
+
+#section-grad-1 {
+  background: rgb(0,115,0);
+  background: linear-gradient(180deg, rgba(0,115,0,1) 0%, rgba(79,115,79,1) 100%);
+}
+
+#section-grad-2 {
+  background: rgb(79,115,79);
+  background: linear-gradient(180deg, rgba(79,115,79,1) 0%, rgba(92,110,92,1) 100%);
+}
+
+#section-grad-3 {
+  background: rgb(81,104,81);
+  background: linear-gradient(180deg, rgba(81,104,81,1) 0%, rgba(56,65,56,1) 100%);
+}
+
+.logos {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  margin: 0 15px;
+  animation: 12s slide infinite linear;
+}
+
+.logos-slide img {
+  display: inline-block;
+  margin: 0 40px;
+  /* 50 on pc */
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,96 @@
     <link rel="stylesheet" href="./styles/extra.css">
     <title>Velo</title>
 </head>
+
 <body class="box-border">
-    <header class="text-white">
-        <div class="">
-            <div></div> <!-- Hamburger -->
-            <div> <!-- LOGO -->
+    <header class="text-white flex flex-col">
+        <div class="flex flex-col content-center shadow-2xl">
+            <div class="self-end m-4">
+                <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 14L20 14" stroke="#FFF" stroke-width="1" stroke-linecap="round" />
+                    <path d="M4 10L20 10" stroke="#FFF" stroke-width="1" stroke-linecap="round" />
+                    <path d="M4 6L20 6" stroke="#FFF" stroke-width="1" stroke-linecap="round" />
+                </svg>
+            </div> 
+            <div class="p-10 mb-4"> 
                 <img src="./src/images/velo_logo.png" alt="logo-of-the-restaurant">
             </div>
-            <div> <!-- CTA -->
-                <button class="bg-green-button p-2 border-2 border-color-white rounded">Aktuelle Karte</button>
-                <button class="bg-green-button p-2 border-2 border-color-white rounded">Reservierung</button>
+            <div class="flex flex-col content-center p-2 mb-12"> 
+                <button class="bg-green-button self-center p-2 w-32 border-2 border-color-white rounded mb-6">Aktuelle Karte</button>
+                <button class="bg-green-button self-center p-2 w-32 border-2 border-color-white rounded">Reservierung</button>
             </div>
         </div>
     </header>
+    <main>
+        <section class="bg-velo-kaki p-8 text-center text-lg font-bold">
+            <h3 class="opacity-65" style="text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);">Auf Vegan spezialisiert für ein umfassendes Erlebnis</h3>
+        </section>
+        <section class="flex flex-col items-center" id="section-grad-1">
+            <div class="w-72 h-96 bg-grey-200 mt-8 mx-24" style="display: block;"></div>
+            <h2 class="text-white text-lg font-bold border-b-4 px-4 py-4 my-4">Lorem Ipsum</h2>
+            <p class="text-white p-8 text-center mb-12">Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum loreum ipsum lorem ipsum lorem ipsu lorem ipsum</p>
+        </section>
+        <section class="bg-velo-kaki p-4 flex flex-col items-center">
+            <h3 class="text-lg font-bold border-b-4 border-black px-4 py-4 mb-6 text-center" style="text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);">Galerie</h3>
+
+            <div class="logos mb-8">
+                <div class="logos-slide">
+                    <img src="./src/images/velo_food_one.jpg" alt="" class="w-48 h-48 object-contain">
+                    <img src="./src/images/velo_food_two.jpg" alt="" class="w-48 h-48 object-contain">
+                    <img src="./src/images/velo_food_three.jpg" alt="" class="w-48 h-48 object-contain">
+                    <img src="./src/images/velo_food_four.jpg" alt="" class="w-48 h-48 object-contain">
+                </div>
+                <div class="logos-slide">
+                    <img src="./src/images/velo_food_one.jpg" alt="" class="w-48 h-48 object-contain">
+                    <img src="./src/images/velo_food_two.jpg" alt="" class="w-48 h-48 object-contain">
+                    <img src="./src/images/velo_food_three.jpg" alt="" class="w-48 h-48 object-contain">
+                    <img src="./src/images/velo_food_four.jpg" alt="" class="w-48 h-48 object-contain">
+                </div>
+                <div class="logos-slide">
+                    <img src="./src/images/velo_food_one.jpg" alt="" class="w-48 h-48 object-contain">
+                    <img src="./src/images/velo_food_two.jpg" alt="" class="w-48 h-48 object-contain">
+                    <img src="./src/images/velo_food_three.jpg" alt="" class="w-48 h-48 object-contain">
+                    <img src="./src/images/velo_food_four.jpg" alt="" class="w-48 h-48 object-contain">
+                </div>
+            </div>
+        </section>
+        <section class="p-4 text-white flex flex-col items-center" id="section-grad-2">
+            <h3 class="text-lg font-bold border-b-4 border-white px-4 py-4 text-center mb-10" style="text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);">Reservierung</h3>
+
+            <div class="h-60 w-60 bg-velo-kaki rounded mb-12">
+
+            </div>
+        </section>
+        <section>
+
+        </section>
+        <section class="bg-velo-kaki flex flex-col items-center">
+            <div class="bg-calm-green h-48 w-40 rounded m-4 mt-12"></div>
+            <div class="bg-calm-green h-48 w-40 rounded m-4"></div>
+            <div class="bg-calm-green h-48 w-40 rounded m-4 mb-12"></div>
+        </section>
+        <section class="text-white flex flex-col items-center p-4" id="section-grad-3">
+            <h3 class="text-lg font-bold border-b-4 border-white px-4 py-4 text-center mb-10">Kontakt</h3>
+            <div class="mb-10">
+                <p class="text-center">VELO Veganes Restaurant: Eichgasse 14, 74072 Heilbronn</p>
+                <p class="text-center">Telefon: +49 7131 7905907</p>
+                <p class="text-center">Öffnungszeiten: ab 21.5.2024: Montag bis Freitag 10:00-22:00 Uhr</p>
+            </div>
+            <div class="mb-10">
+                <p class="text-center font-bold">An gesetzlichen Feiertagen haben wir geschlossen</p>
+            </div>
+            <div class="mb-12">
+                <p class="text-center">Unsere neuen Essenszeiten sind:</p>
+                <p class="text-center">Frühstück: bis 12:00 Uhr</p>
+                <p class="text-center">Mittagstisch: von 12:00-14:00 Uhr</p>
+                <p class="text-center">Nachmittag/Abend: ab 14:00 Uhr bis 21 Uhr</p>
+            </div>
+        </section>
+        <footer class="bg-footer-green flex justify-center align-center text-white p-4">
+            <p>©Velo  |  Impressum  |  Datenschutz</p>
+        </footer>
+        <script src="./src/js/index.js"></script>
+    </main>
 </body>
+
 </html>

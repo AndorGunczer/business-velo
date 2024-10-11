@@ -2,13 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --image-width: 150px;
+    --image-height: 150px;
+    --picture-amount: 4;
+    --picture-whitespace: 25px;
+    --logos-width: calc((var(--picture-amount) * var(--picture-whitespace)) + (var(--image-width) * var(--picture-amount)));
+  }
+
 header {
-    background-image: url("../src/images/bg-velo-header.png");
+    background-image: url("../src/images/bg-velo-header.JPG");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: -500px;
+    background-position-y: center center;
 }
 
 header > div {
     background-color: rgb(0, 0, 0, 65%);
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    } to {
+        transform: translateX(-103%); /* 100 on pc */
+    }
+}
+
+#section-grad-1 {
+    background: rgb(0,115,0);
+    background: linear-gradient(180deg, rgba(0,115,0,1) 0%, rgba(79,115,79,1) 100%);
+}
+
+#section-grad-2 {
+    background: rgb(79,115,79);
+    background: linear-gradient(180deg, rgba(79,115,79,1) 0%, rgba(92,110,92,1) 100%);
+}
+
+#section-grad-3 {
+    background: rgb(81,104,81);
+    background: linear-gradient(180deg, rgba(81,104,81,1) 0%, rgba(56,65,56,1) 100%);
+}
+
+.logos {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.logos:hover .logos-slide {
+    animation-play-state: paused;
+}
+
+.logos-slide {
+    display: inline-block;
+    margin: 0 15px;
+    animation: 12s slide infinite linear;
+}
+
+.logos-slide img {
+    display: inline-block;
+    margin: 0 40px; /* 50 on pc */
 }
