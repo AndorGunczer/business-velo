@@ -14,7 +14,21 @@ header {
     background-image: url("../src/images/bg-velo-header.JPG");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-y: center;
+}
+
+.header-sm {
+    background-image: url("../src/images/bg-velo-header.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
     background-position-y: center center;
+}
+
+.header-lg {
+    background-image: url("../src/images/bg-velo-header.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
 }
 
 header > div {
@@ -29,7 +43,7 @@ header > div {
     }
 }
 
-#section-grad-1 {
+#section-grad-1 /* Speisekarte */ {
     background: rgb(0,115,0);
     background: linear-gradient(180deg, rgba(0,115,0,1) 0%, rgba(79,115,79,1) 100%);
 }
@@ -62,4 +76,27 @@ header > div {
 .logos-slide img {
     display: inline-block;
     margin: 0 40px; /* 50 on pc */
+}
+
+::selection {
+    background-color: #FF822E;
+    color: white;
+}
+
+.nav-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #EAE2D7;
+    border-bottom: 2px solid lightgray;
+    color: black;
+    box-shadow: 0px 5px;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.nav-static {
+    position: static;
+    /* transition: 0.3s; */
 }

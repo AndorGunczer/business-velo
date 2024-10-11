@@ -10,26 +10,38 @@
 </head>
 
 <body class="box-border">
-    <header class="text-white flex flex-col">
+    <header class="lg:header-lg text-white flex flex-col">
         <div class="flex flex-col content-center shadow-2xl">
-            <div class="self-end m-4">
+            <div class="block lg:hidden self-end m-4">
                 <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 14L20 14" stroke="#FFF" stroke-width="1" stroke-linecap="round" />
                     <path d="M4 10L20 10" stroke="#FFF" stroke-width="1" stroke-linecap="round" />
                     <path d="M4 6L20 6" stroke="#FFF" stroke-width="1" stroke-linecap="round" />
                 </svg>
-            </div> 
-            <div class="p-10 mb-4"> 
+            </div>
+            <div id="nav-wrapper" class="hidden lg:block h-20">
+                <nav class="hidden lg:block mb-20 nav-static">
+                    <ul class="flex flex-row justify-end mr-8 my-4">
+                        <a href="#Gutschein"><li class="px-4 py-2">ABOUT</li></a>
+                        <a href="#section-grad-1"><li class="px-4 py-2">KARTE</li></a>
+                        <a href="#Galerie"><li class="px-4 py-2">GALERIE</li></a>
+                        <a href="#section-grad-2"><li class="px-4 py-2">RESERVIERUNG</li></a>
+                        <a href="#News"><li class="px-4 py-2">NEWS</li></a>
+                        <a href="#section-grad-3"><li class="px-4 py-2">KONTAKT</li></a>
+                    </ul>
+                </nav>
+            </div>
+            <div class="p-10 mb-4 flex justify-center lg:mb-12"> 
                 <img src="./src/images/velo_logo.png" alt="logo-of-the-restaurant">
             </div>
-            <div class="flex flex-col content-center p-2 mb-12"> 
-                <button class="bg-green-button self-center p-2 w-32 border-2 border-color-white rounded mb-6">Aktuelle Karte</button>
-                <button class="bg-green-button self-center p-2 w-32 border-2 border-color-white rounded">Reservierung</button>
+            <div class="flex flex-col lg:flex-row content-center lg:justify-center p-2 mb-12"> 
+                <button class="bg-green-button self-center p-2 w-32 lg:w-40 border-2 border-color-white rounded mb-6 lg:mb-0 lg:mr-10">Aktuelle Karte</button>
+                <button class="bg-green-button self-center p-2 w-32 lg:w-40 border-2 border-color-white rounded">Reservierung</button>
             </div>
         </div>
     </header>
     <main>
-        <section class="bg-velo-kaki p-8 text-center text-lg font-bold">
+        <section class="bg-velo-kaki p-8 text-center text-lg font-bold" id="Gutschein">
             <h3 class="opacity-65" style="text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);">Auf Vegan spezialisiert für ein umfassendes Erlebnis</h3>
         </section>
         <section class="flex flex-col items-center" id="section-grad-1">
@@ -37,7 +49,7 @@
             <h2 class="text-white text-lg font-bold border-b-4 px-4 py-4 my-4">Lorem Ipsum</h2>
             <p class="text-white p-8 text-center mb-12">Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum loreum ipsum lorem ipsum lorem ipsu lorem ipsum</p>
         </section>
-        <section class="bg-velo-kaki p-4 flex flex-col items-center">
+        <section class="bg-velo-kaki p-4 flex flex-col items-center" id="Galerie">
             <h3 class="text-lg font-bold border-b-4 border-black px-4 py-4 mb-6 text-center" style="text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);">Galerie</h3>
 
             <div class="logos mb-8">
@@ -71,7 +83,7 @@
         <section>
 
         </section>
-        <section class="bg-velo-kaki flex flex-col items-center">
+        <section class="bg-velo-kaki flex flex-col items-center" id="News">
             <div class="bg-calm-green h-48 w-40 rounded m-4 mt-12"></div>
             <div class="bg-calm-green h-48 w-40 rounded m-4"></div>
             <div class="bg-calm-green h-48 w-40 rounded m-4 mb-12"></div>
@@ -97,6 +109,7 @@
             <p>©Velo  |  Impressum  |  Datenschutz</p>
         </footer>
         <script src="./src/js/index.js"></script>
+        <script src="./src/js/nav.js"></script>
     </main>
 </body>
 
