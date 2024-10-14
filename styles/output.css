@@ -554,6 +554,42 @@ video {
   display: none;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.inset-0 {
+  inset: 0px;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+.z-30 {
+  z-index: 30;
+}
+
 .m-4 {
   margin: 1rem;
 }
@@ -612,12 +648,20 @@ video {
   display: block;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .flex {
   display: flex;
 }
 
 .hidden {
   display: none;
+}
+
+.h-20 {
+  height: 5rem;
 }
 
 .h-48 {
@@ -630,10 +674,6 @@ video {
 
 .h-96 {
   height: 24rem;
-}
-
-.h-20 {
-  height: 5rem;
 }
 
 .w-32 {
@@ -654,6 +694,18 @@ video {
 
 .w-72 {
   width: 18rem;
+}
+
+.w-96 {
+  width: 24rem;
+}
+
+.w-2\/6 {
+  width: 33.333333%;
+}
+
+.w-3\/6 {
+  width: 50%;
 }
 
 .flex-row {
@@ -907,7 +959,71 @@ header > div {
   /* transition: 0.3s; */
 }
 
+.background-img-left {
+  display: inline-block !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.background-img-right {
+  display: inline-block !important;
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+}
+
 @media (min-width: 1024px) {
+  .lg\:absolute {
+    position: absolute;
+  }
+
+  .lg\:relative {
+    position: relative;
+  }
+
+  .lg\:inset-0 {
+    inset: 0px;
+  }
+
+  .lg\:inset-x-0 {
+    left: 0px;
+    right: 0px;
+  }
+
+  .lg\:inset-y-0 {
+    top: 0px;
+    bottom: 0px;
+  }
+
+  .lg\:top-8 {
+    top: 2rem;
+  }
+
+  .lg\:top-12 {
+    top: 3rem;
+  }
+
+  .lg\:top-24 {
+    top: 6rem;
+  }
+
+  .lg\:top-48 {
+    top: 12rem;
+  }
+
+  .lg\:top-32 {
+    top: 8rem;
+  }
+
+  .lg\:z-30 {
+    z-index: 30;
+  }
+
+  .lg\:m-auto {
+    margin: auto;
+  }
+
   .lg\:mb-0 {
     margin-bottom: 0px;
   }
@@ -924,8 +1040,16 @@ header > div {
     display: block;
   }
 
+  .lg\:inline-block {
+    display: inline-block;
+  }
+
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:h-96 {
+    height: 24rem;
   }
 
   .lg\:w-40 {
@@ -938,5 +1062,15 @@ header > div {
 
   .lg\:justify-center {
     justify-content: center;
+  }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }

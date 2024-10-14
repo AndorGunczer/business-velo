@@ -100,3 +100,17 @@ header > div {
     position: static;
     /* transition: 0.3s; */
 }
+
+.background-img-left {
+    display: inline-block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.background-img-right {
+    display: inline-block !important;
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+}
