@@ -10,6 +10,10 @@
     --logos-width: calc((var(--picture-amount) * var(--picture-whitespace)) + (var(--image-width) * var(--picture-amount)));
   }
 
+html {
+	scroll-behavior: smooth;
+}
+
 header {
     background-image: url("../src/images/bg-velo-header.JPG");
     background-repeat: no-repeat;
@@ -113,4 +117,8 @@ header > div {
     position: absolute !important;
     top: 0 !important;
     right: 0 !important;
+}
+
+.half-width {
+    width: 50%;
 }

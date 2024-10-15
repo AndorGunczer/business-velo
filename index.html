@@ -11,7 +11,7 @@
 
 <body class="box-border">
     <header class="lg:header-lg text-white flex flex-col">
-        <div class="flex flex-col content-center shadow-2xl">
+        <div class="flex flex-col content-center lg:items-center shadow-2xl">
             <div class="block lg:hidden self-end m-4">
                 <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 14L20 14" stroke="#FFF" stroke-width="1" stroke-linecap="round" />
@@ -19,7 +19,7 @@
                     <path d="M4 6L20 6" stroke="#FFF" stroke-width="1" stroke-linecap="round" />
                 </svg>
             </div>
-            <div id="nav-wrapper" class="hidden lg:block h-20">
+            <div id="nav-wrapper" class="hidden lg:block h-20 lg:w-full">
                 <nav class="hidden lg:block mb-20 nav-static">
                     <ul class="flex flex-row justify-end mr-8 my-4">
                         <a href="#Gutschein"><li class="px-4 py-2">ABOUT</li></a>
@@ -31,8 +31,12 @@
                     </ul>
                 </nav>
             </div>
-            <div class="p-10 mb-4 flex justify-center lg:mb-12"> 
-                <img src="./src/images/velo_logo.png" alt="logo-of-the-restaurant">
+            <div class="p-10 mb-4 flex justify-center lg:mb-12 lg:w-3/6 lg:h-3/6 w-96 h-72"> 
+                <!-- <img src="./src/images/velo_logo.png" alt="logo-of-the-restaurant"> -->
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 539.55 221.66">
+                    <text transform="translate(174.51 172.94)" style="fill: #fff; font-family: Vollkorn-ExtraBold, Vollkorn; font-size: 32px; font-weight: 700; stroke: #000; stroke-miterlimit: 10;"><tspan x="0" y="0" style="letter-spacing: .2em;">VE</tspan><tspan x="55.58" y="0" style="letter-spacing: .19em;">G</tspan><tspan x="84.35" y="0" style="letter-spacing: .2em;">ANES</tspan><tspan x="-41.47" y="38.4" style="letter-spacing: .2em;">RE</tspan><tspan x="14.34" y="38.4" style="letter-spacing: .18em;">S</tspan><tspan x="37.89" y="38.4" style="letter-spacing: .13em;">T</tspan><tspan x="63.97" y="38.4" style="letter-spacing: .16em;">A</tspan><tspan x="91.94" y="38.4" style="letter-spacing: .2em;">URAN</tspan><tspan x="208.19" y="38.4" style="letter-spacing: .17em;">T</tspan></text>
+                    <text transform="translate(38.74 107.76)" style="fill: #fff; font-family: Vollkorn-ExtraBold, Vollkorn; font-size: 128px; font-weight: 700; letter-spacing: .3em; stroke: #000; stroke-miterlimit: 10;"><tspan x="0" y="0">VELO</tspan></text>
+                  </svg>
             </div>
             <div class="flex flex-col lg:flex-row content-center lg:justify-center p-2 mb-12"> 
                 <button class="bg-green-button self-center p-2 w-32 lg:w-40 border-2 border-color-white rounded mb-6 lg:mb-0 lg:mr-10">Aktuelle Karte</button>
@@ -41,18 +45,23 @@
         </div>
     </header>
     <main>
-        <section class="bg-velo-kaki p-8 text-center text-lg lg:text-2xl font-bold lg:relative lg:h-96" id="Gutschein">
+        <section class="bg-velo-kaki p-8 text-center text-lg lg:relative lg:h-96" id="Gutschein">
             <img src="src/images/section1_1.jpg" class="lg:inline-block hidden absolute top-0 left-0 w-2/6 h-96 z-20" alt="">
-            <h3 class="opacity-65 lg:absolute lg:inset-x-0 lg:top-32 lg:z-30" style="text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);">Auf Vegan spezialisiert für ein umfassendes Erlebnis</h3>
+            <h3 class="opacity-65 lg:absolute lg:inset-x-0 lg:top-32 lg:z-30 lg:text-2xl font-bold" style="text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);">Ein komplettes Geschmackserlebnis für euch alle!</h3>
+            <button class="lg:absolute lg:inset-x-0 lg:top-52 lg:ml-auto lg:mr-auto lg:z-30 bg-velo-kaki self-center p-2 w-32 lg:w-40 border-4 border-black rounded-2xl">Gutschein Kaufen!</button>
             <img src="src/images/section1_2.jpg" class="lg:inline-block hidden absolute top-0 right-0 w-2/6 h-96 z-20" alt="">
         </section>
-        <section class="flex flex-col items-center" id="section-grad-1">
-            <div class="w-72 h-96 bg-grey-200 mt-8 mx-24" style="display: block;"></div>
-            <h2 class="text-white text-lg font-bold border-b-4 px-4 py-4 my-4">Lorem Ipsum</h2>
-            <p class="text-white p-8 text-center mb-12">Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum loreum ipsum lorem ipsum lorem ipsu lorem ipsum</p>
+        <section class="flex flex-col lg:flex-row items-center lg:items-start" id="section-grad-1">
+            <div class="flex flex-col items-center mt-4 lg:w-2/4">
+                <h2 class="text-white text-lg lg:text-2xl font-bold border-b-4 px-4 py-4">Lorem Ipsum</h2>
+                <p class="text-white p-8 text-center lg:text-start">Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum loreum ipsum lorem ipsum lorem ipsu lorem ipsum</p>
+            </div>
+            <div class="lg:w-2/4 lg:flex lg:flex-col lg:items-center lg:border-l-4">
+                <div class="w-72 h-96 bg-grey-200 mt-8 mx-24 mb-12" style="display: block;"></div>
+            </div>
         </section>
         <section class="bg-velo-kaki p-4 flex flex-col items-center" id="Galerie">
-            <h3 class="text-lg font-bold border-b-4 border-black px-4 py-4 mb-6 text-center" style="text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);">Galerie</h3>
+            <h3 class="text-lg lg:text-2xl font-bold border-b-4 border-black px-4 py-4 mb-6 text-center" style="text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);">Galerie</h3>
 
             <div class="logos mb-8">
                 <div class="logos-slide">
@@ -76,7 +85,7 @@
             </div>
         </section>
         <section class="p-4 text-white flex flex-col items-center" id="section-grad-2">
-            <h3 class="text-lg font-bold border-b-4 border-white px-4 py-4 text-center mb-10" style="text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);">Reservierung</h3>
+            <h3 class="text-lg lg:text-2xl font-bold border-b-4 border-white px-4 py-4 text-center mb-10" style="text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);">Reservierung</h3>
 
             <div class="h-60 w-60 bg-velo-kaki rounded mb-12">
 
@@ -85,13 +94,13 @@
         <section>
 
         </section>
-        <section class="bg-velo-kaki flex flex-col items-center" id="News">
-            <div class="bg-calm-green h-48 w-40 rounded m-4 mt-12"></div>
-            <div class="bg-calm-green h-48 w-40 rounded m-4"></div>
-            <div class="bg-calm-green h-48 w-40 rounded m-4 mb-12"></div>
+        <section class="bg-velo-kaki flex flex-col items-center lg:flex-row lg:justify-around lg:px-48" id="News">
+            <div class="bg-calm-green h-48 w-40 rounded m-4 mt-12 lg:my-12"></div>
+            <div class="bg-calm-green h-48 w-40 rounded m-4 lg:my-12"></div>
+            <div class="bg-calm-green h-48 w-40 rounded m-4 mb-12 lg:my-12"></div>
         </section>
         <section class="text-white flex flex-col items-center p-4" id="section-grad-3">
-            <h3 class="text-lg font-bold border-b-4 border-white px-4 py-4 text-center mb-10">Kontakt</h3>
+            <h3 class="text-lg lg:text-2xl font-bold border-b-4 border-white px-4 py-4 text-center mb-10">Kontakt</h3>
             <div class="mb-10">
                 <p class="text-center">VELO Veganes Restaurant: Eichgasse 14, 74072 Heilbronn</p>
                 <p class="text-center">Telefon: +49 7131 7905907</p>
