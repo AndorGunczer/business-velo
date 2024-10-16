@@ -656,6 +656,10 @@ video {
   height: 15rem;
 }
 
+.h-64 {
+  height: 16rem;
+}
+
 .h-72 {
   height: 18rem;
 }
@@ -746,10 +750,6 @@ video {
 
 .border-b-4 {
   border-bottom-width: 4px;
-}
-
-.border-r-4 {
-  border-right-width: 4px;
 }
 
 .border-black {
@@ -888,16 +888,15 @@ header > div {
   background-color: rgb(0, 0, 0, 65%);
 }
 
-@keyframes slide {
-  from {
-    transform: translateX(0);
-  }
+/* @keyframes slide {
+    from {
+        transform: translateX(0);
+    } to {
+        transform: translateX(-103%); /* 100 on pc */
 
-  to {
-    transform: translateX(-103%);
-    /* 100 on pc */
-  }
-}
+/* }  */
+
+/* } */
 
 #section-grad-1 /* Speisekarte */ {
   background: rgb(0,115,0);
@@ -915,24 +914,40 @@ header > div {
 }
 
 .logos {
-  overflow: hidden;
+  overflow: auto;
   white-space: nowrap;
 }
 
-.logos:hover .logos-slide {
-  animation-play-state: paused;
-}
+/* .logos:hover .logos-slide {
+    animation-play-state: paused;
+} */
 
 .logos-slide {
   display: inline-block;
   margin: 0 15px;
-  animation: 12s slide infinite linear;
+  /* animation: 12s slide infinite linear; */
 }
 
 .logos-slide img {
   display: inline-block;
   margin: 0 40px;
   /* 50 on pc */
+  transition: transform 0.3s ease-in-out;
+  /* Smooth transition for scaling */
+}
+
+.logos-slide img.active {
+  transform: scale(1.3);
+  /* Adjust the scale as needed */
+  z-index: 1;
+  /* Ensure the enlarged image appears above others */
+}
+
+.logos-slide img.near-active {
+  transform: scale(1.15);
+  /* Slightly smaller scale for adjacent images */
+  z-index: 0;
+  /* Keep them behind the center image */
 }
 
 ::-moz-selection {
@@ -1098,10 +1113,6 @@ header > div {
 
   .lg\:border-l-4 {
     border-left-width: 4px;
-  }
-
-  .lg\:border-r-4 {
-    border-right-width: 4px;
   }
 
   .lg\:px-48 {

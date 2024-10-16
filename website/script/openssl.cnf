@@ -1,0 +1,25 @@
+[ req ]
+default_bits        = 2048
+default_keyfile     = private.key
+default_md          = sha256
+default_ca          = CA_default
+distinguished_name  = req_distinguished_name
+attributes          = req_attributes
+x509_extensions     = usr_cert
+
+[ req_distinguished_name ]
+countryName                   = AU
+stateOrProvinceName           = Some-State
+localityName                  = City
+organizationName              = Internet Widgits Pty Ltd
+organizationalUnitName        = Section
+commonName                    = localhost
+emailAddress                 = email@example.com
+
+[ req_attributes ]
+challengePassword            = A challenge password
+unstructuredName             = An optional company name
+
+[ usr_cert ]
+basicConstraints = CA:FALSE
+keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment

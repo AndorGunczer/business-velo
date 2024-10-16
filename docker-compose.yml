@@ -1,0 +1,19 @@
+services:
+  website:
+    container_name: website
+    build:
+      context: ./website
+      dockerfile: Dockerfile
+    ports:
+      - "443:443"
+    volumes:
+      - ${PWD}/website/app:/app/website
+    networks:
+      static-network:
+        ipv4_address: 192.168.10.2
+
+networks:
+  static-network:
+    ipam:
+      config:
+        - subnet: 192.168.10.0/24
