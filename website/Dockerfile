@@ -12,6 +12,7 @@ RUN ssh-keygen -A
 
 # install app related software
 RUN apt-get install npm -y
+RUN npm i typescript --save-dev
 
 # install host related software
 RUN apt-get install nginx -y
