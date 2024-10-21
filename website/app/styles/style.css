@@ -102,6 +102,9 @@ header > div {
 
 
 .nav-fixed {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -115,6 +118,10 @@ header > div {
 }
 
 .nav-static {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-direction: row; */
     position: static;
     /* transition: 0.3s; */
 }

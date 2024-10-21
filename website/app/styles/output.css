@@ -644,6 +644,10 @@ video {
   display: none;
 }
 
+.h-16 {
+  height: 4rem;
+}
+
 .h-20 {
   height: 5rem;
 }
@@ -670,6 +674,10 @@ video {
 
 .w-2\/6 {
   width: 33.333333%;
+}
+
+.w-24 {
+  width: 6rem;
 }
 
 .w-32 {
@@ -823,6 +831,10 @@ video {
   padding-bottom: 1rem;
 }
 
+.pl-8 {
+  padding-left: 2rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -961,6 +973,9 @@ header > div {
 }
 
 .nav-fixed {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -974,6 +989,10 @@ header > div {
 }
 
 .nav-static {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-direction: row; */
   position: static;
   /* transition: 0.3s; */
 }
