@@ -1015,6 +1015,14 @@ header > div {
   width: 50%;
 }
 
+.img-static {
+  display: hidden;
+}
+
+.img-fixed {
+  display: block;
+}
+
 @media (min-width: 1024px) {
   .lg\:absolute {
     position: absolute;

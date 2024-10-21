@@ -143,3 +143,11 @@ header > div {
 .half-width {
     width: 50%;
 }
+
+.img-static {
+    visibility: hidden;
+}
+
+.img-fixed {
+    visibility: block;
+}
