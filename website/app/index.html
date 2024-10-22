@@ -12,12 +12,14 @@
 <body class="box-border">
     <header class="lg:header-lg text-white flex flex-col">
         <div class="flex flex-col content-center lg:items-center shadow-2xl">
-            <div class="block lg:hidden self-end m-4">
-                <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 14L20 14" stroke="#FFF" stroke-width="1" stroke-linecap="round" />
-                    <path d="M4 10L20 10" stroke="#FFF" stroke-width="1" stroke-linecap="round" />
-                    <path d="M4 6L20 6" stroke="#FFF" stroke-width="1" stroke-linecap="round" />
-                </svg>
+            <div id="mobile-nav-wrapper" class="block lg:hidden h-20 w-full">
+                <div class="block lg:hidden self-end p-4 mb-16 hamburger-static w-full" id="mobile-nav">
+                    <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 14L20 14" stroke="#FFF" stroke-width="1" stroke-linecap="round" />
+                        <path d="M4 10L20 10" stroke="#FFF" stroke-width="1" stroke-linecap="round" />
+                        <path d="M4 6L20 6" stroke="#FFF" stroke-width="1" stroke-linecap="round" />
+                    </svg>
+                </div>
             </div>
             <div id="nav-wrapper" class="hidden lg:block h-20 lg:w-full">
                 <nav class="hidden mb-20 nav-static">
