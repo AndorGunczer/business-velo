@@ -62,6 +62,10 @@ header > div {
     background: linear-gradient(180deg, rgba(81,104,81,1) 0%, rgba(56,65,56,1) 100%);
 }
 
+#scroll-container {
+    overflow: scroll;
+}
+
 .logos {
     overflow: auto;
     white-space: nowrap;
@@ -72,14 +76,14 @@ header > div {
 } */
 
 .logos-slide {
-    display: inline-block;
-    margin: 0 15px;
+    /* display: inline-block; */
+    /* margin: 0 15px; */
     /* animation: 12s slide infinite linear; */
 }
 
 .logos-slide img {
-    display: inline-block;
-    margin: 0 40px; /* 50 on pc */
+    /* display: inline-block; */
+    margin: 0 40px; /*50 on pc*/
     transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
 }
 

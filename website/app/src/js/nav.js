@@ -6,7 +6,7 @@ window.addEventListener("scroll", function () {
     var navElement = document.getElementsByTagName("nav")[0];
     var imgElement = document.getElementById("velo-mini");
     var mobileNav = document.getElementById("mobile-nav");
-    console.log(scrollPosition);
+    // console.log(scrollPosition);
     if (scrollPosition > 72) {
         imgElement.setAttribute("class", "img-fixed h-16 w-24 pl-8 py-4");
         navElement.setAttribute("class", "nav-fixed");
