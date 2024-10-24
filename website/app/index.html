@@ -50,25 +50,25 @@
     <main>
         <section class="bg-velo-kaki p-8 text-center text-lg lg:relative lg:h-96" id="Gutschein">
             <img src="src/images/section1_1.jpg" class="lg:inline-block hidden absolute top-0 left-0 w-2/6 h-96 z-20" alt="">
-            <h3 class="opacity-65 lg:absolute lg:inset-x-0 lg:top-32 lg:z-30 lg:text-2xl font-bold" style="text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);">Ein komplettes Geschmackserlebnis für euch alle!</h3>
-            <a href="https://www.gurado.de/velo/"><button class="lg:absolute lg:inset-x-0 lg:top-52 lg:ml-auto lg:mr-auto lg:z-30 bg-velo-kaki self-center p-2 w-32 lg:w-40 border-4 border-black rounded-2xl">Gutschein Kaufen!</button></a>
+            <h3 class="opacity-65 lg:absolute lg:inset-x-0 lg:top-32 lg:my-0 my-8 lg:z-30 lg:text-2xl font-bold" style="text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);">Ein komplettes Geschmackserlebnis für euch alle!</h3>
+            <a href="https://www.gurado.de/velo/"><button class="lg:absolute lg:inset-x-0 lg:top-52 lg:mb-0 mb-8 lg:ml-auto lg:mr-auto lg:z-30 bg-velo-kaki self-center p-2 w-32 lg:w-40 border-4 border-black rounded-2xl">Gutschein Kaufen!</button></a>
             <img src="src/images/section1_2.jpg" class="lg:inline-block hidden absolute top-0 right-0 w-2/6 h-96 z-20" alt="">
         </section>
         <section class="flex flex-col lg:flex-row items-center lg:items-start" id="section-grad-1">
-            <div class="flex flex-col items-center mt-4 lg:w-2/4">
+            <div class="flex flex-col items-center mt-8 lg:my-8 lg:w-2/4">
                 <h2 class="text-white text-lg lg:text-2xl font-bold border-b-4 px-4 py-4">Lorem Ipsum</h2>
                 <p class="text-white p-8 text-center lg:text-start">Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum loreum ipsum lorem ipsum lorem ipsu lorem ipsum</p>
             </div>
-            <div class="lg:w-2/4 lg:flex lg:flex-col lg:items-center lg:border-l-4">
+            <div class="lg:w-2/4 lg:flex lg:flex-col lg:items-center lg:border-l-4 lg:my-8 mb-8">
                 <!-- <div class="w-72 h-96 bg-grey-200 mt-8 mx-24 mb-12" style="display: block;"></div> -->
-                <iframe src="https://drive.google.com/file/d/1txBgYXZBDATZnc48cxoUN1WFjW_xg341/preview" class="w-72 h-96 bg-grey-200 mt-8 mx-24 mb-12" width="640" height="480" allow="autoplay"></iframe>
+                <iframe src="https://drive.google.com/file/d/1txBgYXZBDATZnc48cxoUN1WFjW_xg341/preview" class="w-72 h-96 bg-grey-200 mt-8 mx-24 mb-8" width="640" height="480" allow="autoplay"></iframe>
             </div>
         </section>
         <section class="bg-velo-kaki p-4 flex flex-col items-center" id="Galerie">
-            <h3 class="text-lg lg:text-2xl font-bold border-b-4 border-black px-4 py-4 mb-6 text-center" style="text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);">Galerie</h3>
+            <h3 class="text-lg lg:text-2xl font-bold border-b-4 border-black px-4 py-4 pt-8 mb-6 text-center" style="text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);">Galerie</h3>
 
-            <div class="logos mb-8">
-                <div class="logos-slide flex flex-row justify-center items-center h-64" id="scroll-container">
+            <div class="logos">
+                <div class="logos-slide flex flex-row justify-start items-center lg:h-64 h-48" id="scroll-container">
                     <img src="./src/images/velo_food_one.jpg" alt="" class="w-48 h-48 object-contain">
                     <img src="./src/images/velo_food_two.jpg" alt="" class="w-48 h-48 object-contain">
                     <img src="./src/images/velo_food_three.jpg" alt="" class="w-48 h-48 object-contain">
@@ -88,9 +88,19 @@
 
         </section>
         <section class="bg-velo-kaki flex flex-col items-center lg:flex-row lg:justify-around lg:px-48" id="News">
-            <div class="bg-calm-green h-48 w-40 rounded m-4 mt-12 lg:my-12"></div>
-            <div class="bg-calm-green h-48 w-40 rounded m-4 lg:my-12"></div>
-            <div class="bg-calm-green h-48 w-40 rounded m-4 mb-12 lg:my-12"></div>
+            <a href="./templates/tex-mex.html"><div class="card bg-calm-green h-96 w-64 rounded m-4 mt-12 lg:my-12">
+                <div class="card-header">
+                    <img src="./src/images/tex-mex-abend.png" alt="" class="h-full w-full">
+                </div>
+                <div class="card-body text-white flex flex-col items-start justify-start border-t border-white">
+                    <h2 class="lg:text-lg px-4 mt-4 leading-6">Tex-Mex-Abend</h2>
+                    <h3 class="lg:text-md px-4 leading-6">Hamburger for Everyone!</h3>
+                    <h4 class="lg:text-sm px-4 leading-6">Date: 25.10.2024</h4>
+                    <p class="lg:text-xs p-4">Liebe Gäste, ein weiterer Velo-Abend ist in Planung. Wir laden euch herzlich zu unserem Tex-Mex-Abend am Freitag den 02. Februar ein.</p>
+                </div>
+            </div></a>
+            <div class="card bg-calm-green h-96 w-64 rounded m-4 lg:my-12"></div>
+            <div class="card bg-calm-green h-96 w-64 rounded m-4 mb-12 lg:my-12"></div>
         </section>
         <section class="text-white flex flex-col items-center p-4" id="section-grad-3">
             <h3 class="text-lg lg:text-2xl font-bold border-b-4 border-white px-4 py-4 text-center mb-10">Kontakt</h3>

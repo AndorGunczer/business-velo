@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.html"],
+  content: ["./*.html", "./templates/*html"],
   theme: {
     extend: {
       colors: {
@@ -10,6 +10,7 @@ module.exports = {
         'grey-200': '#e5e7eb',
         'calm-green': '#5c6e5c',
         'footer-green': '#252A25',
+        'secondary-button': '#527B96',
       },
       borders: {
         'border-1': '1px',
