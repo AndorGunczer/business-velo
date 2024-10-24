@@ -11,14 +11,24 @@
 
 <body class="box-border">
     <header class="lg:header-lg text-white flex flex-col">
-        <div class="flex flex-col content-center lg:items-center shadow-2xl">
-            <div id="mobile-nav-wrapper" class="block lg:hidden h-20 w-full">
-                <div class="block lg:hidden self-end p-4 mb-16 hamburger-static w-full" id="mobile-nav">
-                    <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 14L20 14" stroke="#FFF" stroke-width="1" stroke-linecap="round" />
-                        <path d="M4 10L20 10" stroke="#FFF" stroke-width="1" stroke-linecap="round" />
-                        <path d="M4 6L20 6" stroke="#FFF" stroke-width="1" stroke-linecap="round" />
-                    </svg>
+        <div class="flex flex-col content-center lg:items-center shadow-2xl overflow-x-hidden">
+            <div id="mobile-nav-wrapper" class="block lg:hidden h-20 w-full overflow-x-hidden relative">
+                <div class="block lg:hidden self-end p-4 mb-16 hamburger-static w-full overflow-x-hidden" id="mobile-nav">
+                    <input type="checkbox" id="hamburger-input" class="burger-shower" />
+                    <label id="hamburger-menu" for="hamburger-input">
+                        <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 14L20 14" stroke="#FFF" stroke-width="1" stroke-linecap="round" />
+                            <path d="M4 10L20 10" stroke="#FFF" stroke-width="1" stroke-linecap="round" />
+                            <path d="M4 6L20 6" stroke="#FFF" stroke-width="1" stroke-linecap="round" />
+                        </svg>
+                        <ul id="sidebar-menu" class="flex flex-col justify-evenly items-stretch">
+                            <li><a href="./itallap.html">Itallap</a></li>
+                            <li><a href="#">Étlap</a></li>
+                            <li><a href="#">Fotógaléria</a></li>
+                            <li><a href="#">Elérhetőségünk</a></li>
+                            <li><a href="./index.html">Rólunk</a></li>
+                        </ul>
+                    </label>
                 </div>
             </div>
             <div id="nav-wrapper" class="hidden lg:block h-20 lg:w-full">
@@ -64,7 +74,7 @@
                 <iframe src="https://drive.google.com/file/d/1txBgYXZBDATZnc48cxoUN1WFjW_xg341/preview" class="w-72 h-96 bg-grey-200 mt-8 mx-24 mb-8" width="640" height="480" allow="autoplay"></iframe>
             </div>
         </section>
-        <section class="bg-velo-kaki p-4 flex flex-col items-center" id="Galerie">
+        <section class="bg-velo-kaki p-4 flex flex-col items-center overflow-x-hidden" id="Galerie">
             <h3 class="text-lg lg:text-2xl font-bold border-b-4 border-black px-4 py-4 pt-8 mb-6 text-center" style="text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);">Galerie</h3>
 
             <div class="logos">

@@ -558,6 +558,10 @@ video {
   position: absolute;
 }
 
+.relative {
+  position: relative;
+}
+
 .left-0 {
   left: 0px;
 }
@@ -568,14 +572,6 @@ video {
 
 .top-0 {
   top: 0px;
-}
-
-.top-24 {
-  top: 6rem;
-}
-
-.top-32 {
-  top: 8rem;
 }
 
 .z-20 {
@@ -685,10 +681,6 @@ video {
   height: 15rem;
 }
 
-.h-64 {
-  height: 16rem;
-}
-
 .h-72 {
   height: 18rem;
 }
@@ -761,6 +753,10 @@ video {
   align-items: center;
 }
 
+.items-stretch {
+  align-items: stretch;
+}
+
 .justify-start {
   justify-content: flex-start;
 }
@@ -773,12 +769,20 @@ video {
   justify-content: center;
 }
 
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
 .self-end {
   align-self: flex-end;
 }
 
 .self-center {
   align-self: center;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 
 .rounded {
@@ -1184,6 +1188,48 @@ header > div {
   height: 70%;
 }
 
+/* HAMBURGER ANIMATION */
+
+#hamburger-input {
+  visibility: hidden;
+}
+
+#hamburger-menu #sidebar-menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 0;
+}
+
+#hamburger-menu #sidebar-menu ul a {
+  color: #FDFDFD;
+}
+
+#hamburger-input:checked + #hamburger-menu #sidebar-menu {
+  visibility: visible;
+  right: 0;
+}
+
+#hamburger-menu #sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: fixed;
+  top: -1000px;
+  right: 0;
+  height: 300px;
+  width: 100%;
+  padding-top: 0;
+  transition: 0.4s;
+  background-color: #EAE2D7;
+  color: #000;
+}
+
+#hamburger-input:checked + #hamburger-menu #sidebar-menu {
+  top: 0;
+}
+
 @media (min-width: 1024px) {
   .lg\:absolute {
     position: absolute;
@@ -1210,14 +1256,14 @@ header > div {
     z-index: 30;
   }
 
-  .lg\:my-12 {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-  }
-
   .lg\:my-0 {
     margin-top: 0px;
     margin-bottom: 0px;
+  }
+
+  .lg\:my-12 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 
   .lg\:my-8 {
@@ -1245,14 +1291,6 @@ header > div {
     margin-right: auto;
   }
 
-  .lg\:mt-0 {
-    margin-top: 0px;
-  }
-
-  .lg\:mt-8 {
-    margin-top: 2rem;
-  }
-
   .lg\:block {
     display: block;
   }
@@ -1273,12 +1311,12 @@ header > div {
     height: 50%;
   }
 
-  .lg\:h-96 {
-    height: 24rem;
-  }
-
   .lg\:h-64 {
     height: 16rem;
+  }
+
+  .lg\:h-96 {
+    height: 24rem;
   }
 
   .lg\:w-2\/4 {

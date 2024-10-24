@@ -250,3 +250,45 @@ header > div {
 .card:hover .card-body {
     height: 70%;
 }
+
+/* HAMBURGER ANIMATION */ 
+
+#hamburger-input {
+    visibility: hidden;
+}
+
+#hamburger-menu #sidebar-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+}
+
+#hamburger-menu #sidebar-menu ul a {
+    color: #FDFDFD;
+}
+
+#hamburger-input:checked + #hamburger-menu #sidebar-menu {
+    visibility: visible;
+    right: 0;
+}
+
+#hamburger-menu #sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    top: -1000px;
+    right: 0;
+    height: 300px;
+    width: 100%;
+    padding-top: 0;
+    transition: 0.4s;
+    background-color: #EAE2D7;
+    color: #000;
+}
+
+#hamburger-input:checked + #hamburger-menu #sidebar-menu {
+    top: 0;
+}

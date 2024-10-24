@@ -10,11 +10,11 @@ window.addEventListener("scroll", function () {
     if (scrollPosition > 72) {
         imgElement.setAttribute("class", "img-fixed h-16 w-24 pl-8 py-4");
         navElement.setAttribute("class", "nav-fixed");
-        mobileNav.setAttribute("class", "block lg:hidden p-4 mb-16 hamburger-fixed");
+        mobileNav.setAttribute("class", "block lg:hidden p-4 mb-16 hamburger-fixed overflow-x-hidden");
     }
     else {
         imgElement.setAttribute("class", "img-static h-16 w-24 pl-8 py-4");
         navElement.setAttribute("class", "nav-static");
-        mobileNav.setAttribute("class", "block lg:hidden p-4 mb-16 hamburger-static");
+        mobileNav.setAttribute("class", "block lg:hidden p-4 mb-16 hamburger-static overflow-x-hidden");
     }
 });
