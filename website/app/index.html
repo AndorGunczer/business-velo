@@ -13,22 +13,24 @@
     <header class="lg:header-lg text-white flex flex-col">
         <div class="flex flex-col content-center lg:items-center shadow-2xl overflow-x-hidden">
             <div id="mobile-nav-wrapper" class="block lg:hidden h-20 w-full overflow-x-hidden relative">
-                <div class="block lg:hidden self-end p-4 mb-16 hamburger-static w-full overflow-x-hidden" id="mobile-nav">
-                    <input type="checkbox" id="hamburger-input" class="burger-shower" />
-                    <label id="hamburger-menu" for="hamburger-input">
-                        <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 14L20 14" stroke="#FFF" stroke-width="1" stroke-linecap="round" />
-                            <path d="M4 10L20 10" stroke="#FFF" stroke-width="1" stroke-linecap="round" />
-                            <path d="M4 6L20 6" stroke="#FFF" stroke-width="1" stroke-linecap="round" />
+                <div class="flex flex-row items-center justify-center block lg:hidden self-end p-4 mb-16 hamburger-static w-full overflow-x-hidden" id="mobile-nav">
+                    <img src="./src/images/velo_black.png" class="img-static h-16 w-24 pl-8 py-4" alt="" id="velo-mobile-mini">
+                    <div class="flex justify-center items-center pr-8"><input type="checkbox" id="hamburger-input" class="burger-shower absolute" />
+                    <label id="hamburger-menu" for="hamburger-input" class="flex justify-center items-center">
+                        <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="hamburger-container">
+                            <path d="M4 14L20 14" stroke="#FFF" stroke-width="1.3" stroke-linecap="round" />
+                            <path d="M4 10L20 10" stroke="#FFF" stroke-width="1.3" stroke-linecap="round" />
+                            <path d="M4 6L20 6" stroke="#FFF" stroke-width="1.3" stroke-linecap="round" />
                         </svg>
                         <ul id="sidebar-menu" class="flex flex-col justify-evenly items-stretch">
-                            <li><a href="./itallap.html">Itallap</a></li>
-                            <li><a href="#">Étlap</a></li>
-                            <li><a href="#">Fotógaléria</a></li>
-                            <li><a href="#">Elérhetőségünk</a></li>
-                            <li><a href="./index.html">Rólunk</a></li>
+                            <li class="flex justify-center items-center border-b-2 border-slate-500 w-full grow opacity-65"><a href="#Gutschein">ABOUT</a></li>
+                            <li class="flex justify-center items-center border-b-2 border-slate-500 w-full grow opacity-65"><a href="#section-grad-1">KARTE</a></li>
+                            <li class="flex justify-center items-center border-b-2 border-slate-500 w-full grow opacity-65"><a href="#Galerie">GALERIE</a></li>
+                            <li class="flex justify-center items-center border-b-2 border-slate-500 w-full grow opacity-65"><a href="#section-grad-2">RESERVIERUNG</a></li>
+                            <li class="flex justify-center items-center border-b-2 border-slate-500 w-full grow opacity-65"><a href="#News">NEWS</a></li>
+                            <li class="flex justify-center items-center border-b-2 border-slate-500 w-full grow opacity-65"><a href="#section-grad-3">KONTAKT</a></li>
                         </ul>
-                    </label>
+                    </label></div>
                 </div>
             </div>
             <div id="nav-wrapper" class="hidden lg:block h-20 lg:w-full">
