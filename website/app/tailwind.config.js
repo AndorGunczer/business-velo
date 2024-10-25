@@ -11,6 +11,7 @@ module.exports = {
         'calm-green': '#5c6e5c',
         'footer-green': '#252A25',
         'secondary-button': '#527B96',
+        'velo-blue': '#03c4eb',
       },
       borders: {
         'border-1': '1px',
