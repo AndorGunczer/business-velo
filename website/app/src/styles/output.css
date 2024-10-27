@@ -587,11 +587,6 @@ video {
   margin-right: 6rem;
 }
 
-.mx-8 {
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -636,10 +631,6 @@ video {
 
 .mt-12 {
   margin-top: 3rem;
-}
-
-.mt-24 {
-  margin-top: 6rem;
 }
 
 .mt-4 {
@@ -828,13 +819,13 @@ video {
   border-color: rgb(100 116 139 / var(--tw-border-opacity));
 }
 
+.border-transparent {
+  border-color: transparent;
+}
+
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
-.border-transparent {
-  border-color: transparent;
 }
 
 .bg-calm-green {
@@ -914,17 +905,8 @@ video {
   text-align: center;
 }
 
-.text-justify {
-  text-align: justify;
-}
-
 .text-lg {
   font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-.text-xl {
-  font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
@@ -972,21 +954,21 @@ html {
 }
 
 header {
-  background-image: url("../src/images/bg-velo-header.JPG");
+  background-image: url("../images/bg-velo-header.JPG");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: center;
 }
 
 .header-sm {
-  background-image: url("../src/images/bg-velo-header.JPG");
+  background-image: url("../images/bg-velo-header.JPG");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: center center;
 }
 
 .header-lg {
-  background-image: url("../src/images/bg-velo-header.JPG");
+  background-image: url("../images/bg-velo-header.JPG");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: center;
@@ -1269,18 +1251,9 @@ header > div {
   top: 0;
 }
 
-.hover\:border-2:hover {
-  border-width: 2px;
-}
-
 .hover\:border-white:hover {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
-.hover\:bg-blue-400:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(96 165 250 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-velo-blue:hover {
@@ -1317,15 +1290,6 @@ header > div {
 
   .lg\:z-30 {
     z-index: 30;
-  }
-
-  .lg\:m-12 {
-    margin: 3rem;
-  }
-
-  .lg\:mx-24 {
-    margin-left: 6rem;
-    margin-right: 6rem;
   }
 
   .lg\:my-0 {
@@ -1447,11 +1411,6 @@ header > div {
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
-  }
-
-  .lg\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 
   .lg\:text-lg {

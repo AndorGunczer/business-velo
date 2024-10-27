@@ -1,0 +1,2 @@
+build tailwindcss: npx tailwindcss -i ./styles/style.css -o ./styles/output.css --watch
+build server: npx ts-node ./app.ts  

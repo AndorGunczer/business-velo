@@ -15,21 +15,21 @@ html {
 }
 
 header {
-    background-image: url("../src/images/bg-velo-header.JPG");
+    background-image: url("../images/bg-velo-header.JPG");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: center;
 }
 
 .header-sm {
-    background-image: url("../src/images/bg-velo-header.JPG");
+    background-image: url("../images/bg-velo-header.JPG");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: center center;
 }
 
 .header-lg {
-    background-image: url("../src/images/bg-velo-header.JPG");
+    background-image: url("../images/bg-velo-header.JPG");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: center;

@@ -1,16 +1,24 @@
-// // src/index.js
-// const express = require('express');
-// const dotenv = require('dotenv');
+// src/index.ts
+import path from 'path';
+import express, { Express, Request, Response } from "express";
+import dotenv from "dotenv";
 
-// dotenv.config();
+dotenv.config();
 
-// const app = express();
-// const port = process.env.PORT;
+const app: Express = express();
+const port = process.env.PORT || 3000;
 
-// app.get('/', (req, res) => {
-//   res.send('Express + TypeScript Server');
-// });
+// Serve static files from the `src` folder
+app.use(express.static(path.join(__dirname, 'src')));
 
-// app.listen(port, () => {
-//   console.log(`[server]: Server is running at http://localhost:${port}`);
-// });
+app.get("/", (req: Request, res: Response) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.get("/tex-mex-abend", (req: Request, res: Response) => {
+  res.render('tex-mex.ejs');
+});
+
+app.listen(port, () => {
+  console.log(`[server]: Server is running at http://localhost:${port}`);
+});
