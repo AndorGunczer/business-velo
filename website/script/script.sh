@@ -9,4 +9,8 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 
 service nginx start
 
-tail -f /dev/null
+cd /app/website
+
+npx ts-node ./app.ts
+
+# tail -f /dev/null

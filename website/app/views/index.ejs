@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/extra.css">
+    <title>Velo</title>
+</head>
+
+<body class="box-border">
+    <header class="lg:header-lg text-white flex flex-col">
+        <div class="flex flex-col content-center lg:items-center shadow-2xl overflow-x-hidden">
+            <div id="mobile-nav-wrapper" class="block lg:hidden h-20 w-full overflow-x-hidden relative">
+                <div class="flex flex-row items-center justify-center block lg:hidden self-end p-4 mb-16 hamburger-static w-full overflow-x-hidden" id="mobile-nav">
+                    <img src="./images/velo_black.png" class="img-static h-16 w-24 pl-8 py-4" alt="" id="velo-mobile-mini">
+                    <div class="flex justify-center items-center pr-8"><input type="checkbox" id="hamburger-input" class="burger-shower absolute" />
+                    <label id="hamburger-menu" for="hamburger-input" class="flex justify-center items-center">
+                        <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="hamburger-container">
+                            <path d="M4 14L20 14" stroke="#FFF" stroke-width="1.3" stroke-linecap="round" />
+                            <path d="M4 10L20 10" stroke="#FFF" stroke-width="1.3" stroke-linecap="round" />
+                            <path d="M4 6L20 6" stroke="#FFF" stroke-width="1.3" stroke-linecap="round" />
+                        </svg>
+                        <ul id="sidebar-menu" class="flex flex-col justify-evenly items-stretch">
+                            <li class="flex justify-center items-center border-b-2 border-slate-500 w-full grow opacity-65"><a href="#Gutschein">ABOUT</a></li>
+                            <li class="flex justify-center items-center border-b-2 border-slate-500 w-full grow opacity-65"><a href="#section-grad-1">KARTE</a></li>
+                            <li class="flex justify-center items-center border-b-2 border-slate-500 w-full grow opacity-65"><a href="#Galerie">GALERIE</a></li>
+                            <li class="flex justify-center items-center border-b-2 border-slate-500 w-full grow opacity-65"><a href="#section-grad-2">RESERVIERUNG</a></li>
+                            <li class="flex justify-center items-center border-b-2 border-slate-500 w-full grow opacity-65"><a href="#News">NEWS</a></li>
+                            <li class="flex justify-center items-center border-b-2 border-slate-500 w-full grow opacity-65"><a href="#section-grad-3">KONTAKT</a></li>
+                        </ul>
+                    </label></div>
+                </div>
+            </div>
+            <div id="nav-wrapper" class="hidden lg:block h-20 lg:w-full">
+                <nav class="hidden mb-20 nav-static">
+                    <img src="./images/velo_black.png" class="img-static h-16 w-24 pl-8 py-4" alt="" id="velo-mini">
+                    <ul class="flex flex-row justify-end mr-8 my-4">
+                        <a href="#Gutschein"><li class="transform hover:bg-velo-blue hover:text-white duration-400 hover:border-white  border-2 border-transparent rounded transition  px-4 py-2">ABOUT</li></a>
+                        <a href="#section-grad-1"><li class="transform hover:bg-velo-blue hover:text-white duration-400 hover:border-white  border-2 border-transparent rounded transition  px-4 py-2">KARTE</li></a>
+                        <a href="#Galerie"><li class="transform hover:bg-velo-blue hover:text-white duration-400 hover:border-white  border-2 border-transparent rounded transition  px-4 py-2">GALERIE</li></a>
+                        <a href="#section-grad-2"><li class="transform hover:bg-velo-blue hover:text-white duration-400 hover:border-white  border-2 border-transparent rounded transition  px-4 py-2">RESERVIERUNG</li></a>
+                        <a href="#News"><li class="transform hover:bg-velo-blue hover:text-white duration-400 hover:border-white  border-2 border-transparent rounded transition  px-4 py-2">NEWS</li></a>
+                        <a href="#section-grad-3"><li class="transform hover:bg-velo-blue hover:text-white duration-400 hover:border-white border-2 border-transparent rounded transition  px-4 py-2">KONTAKT</li></a>
+                    </ul>
+                </nav>
+            </div>
+            <div class="p-10 mb-4 flex justify-center lg:mb-12 lg:w-3/6 lg:h-3/6 w-96 h-72"> 
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 539.55 221.66">
+                    <text transform="translate(174.51 172.94)" style="fill: #fff; font-family: Vollkorn-ExtraBold, Vollkorn; font-size: 32px; font-weight: 700; stroke: #000; stroke-miterlimit: 10;"><tspan x="0" y="0" style="letter-spacing: .2em;">VE</tspan><tspan x="55.58" y="0" style="letter-spacing: .19em;">G</tspan><tspan x="84.35" y="0" style="letter-spacing: .2em;">ANES</tspan><tspan x="-41.47" y="38.4" style="letter-spacing: .2em;">RE</tspan><tspan x="14.34" y="38.4" style="letter-spacing: .18em;">S</tspan><tspan x="37.89" y="38.4" style="letter-spacing: .13em;">T</tspan><tspan x="63.97" y="38.4" style="letter-spacing: .16em;">A</tspan><tspan x="91.94" y="38.4" style="letter-spacing: .2em;">URAN</tspan><tspan x="208.19" y="38.4" style="letter-spacing: .17em;">T</tspan></text>
+                    <text transform="translate(38.74 107.76)" style="fill: #fff; font-family: Vollkorn-ExtraBold, Vollkorn; font-size: 128px; font-weight: 700; letter-spacing: .3em; stroke: #000; stroke-miterlimit: 10;"><tspan x="0" y="0">VELO</tspan></text>
+                  </svg>
+            </div>
+            <div class="flex flex-col lg:flex-row content-center lg:justify-center p-2 mb-12"> 
+                <a class="self-center" href="https://drive.google.com/file/d/1txBgYXZBDATZnc48cxoUN1WFjW_xg341/preview" target=”_blank”><button class="transform hover:bg-velo-blue transition duration-400 bg-green-button self-center p-2 w-32 lg:w-40 border-2 border-color-white rounded mb-6 lg:mb-0 lg:mr-10">Aktuelle Karte</button></a>
+                <a class="self-center" href="#section-grad-2"><button class="transform hover:bg-velo-blue transition duration-400 bg-green-button self-center p-2 w-32 lg:w-40 border-2 border-color-white rounded">Reservierung</button></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="bg-velo-kaki p-8 text-center text-lg lg:relative lg:h-96" id="Gutschein">
+            <img src="./images/section1_1.jpg" class="lg:inline-block hidden absolute top-0 left-0 w-2/6 h-96 z-20" alt="">
+            <h3 class="opacity-65 lg:absolute lg:inset-x-0 lg:top-32 lg:my-0 my-8 lg:z-30 lg:text-2xl font-bold" style="text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);">Ein komplettes Geschmackserlebnis für euch alle!</h3>
+            <a href="https://www.gurado.de/velo/"><button class="transform hover:bg-velo-blue transition duration-400 hover:border-white hover:text-white lg:absolute lg:inset-x-0 lg:top-52 lg:mb-0 mb-8 lg:ml-auto lg:mr-auto lg:z-30 bg-velo-kaki self-center p-2 w-32 lg:w-40 border-4 border-black rounded-2xl">Gutschein Kaufen!</button></a>
+            <img src="./images/section1_2.jpg" class="lg:inline-block hidden absolute top-0 right-0 w-2/6 h-96 z-20" alt="">
+        </section>
+        <section class="flex flex-col lg:flex-row items-center lg:items-start overflow-x-hidden" id="section-grad-1"> <!--class="flex flex-col lg:flex-row items-center lg:items-start" -->
+            <div class="flex flex-col items-center mt-8 lg:my-8 lg:w-2/4"> <!--flex flex-col items-center mt-8 lg:my-8 lg:w-2/4-->
+                <h2 class="text-white text-lg lg:text-2xl font-bold border-b-4 px-4 py-4">Lorem Ipsum</h2> <!--text-white text-lg lg:text-2xl font-bold border-b-4 px-4 py-4-->
+                <p class="text-white p-8 text-center lg:text-start">Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum loreum ipsum lorem ipsum lorem ipsu lorem ipsum</p> <!--text-white p-8 text-center lg:text-start-->
+            </div>
+            <div class="lg:w-2/4 lg:flex lg:flex-col lg:items-center lg:border-l-4 lg:my-8 mb-8"> <!--lg:w-2/4 lg:flex lg:flex-col lg:items-center lg:border-l-4 lg:my-8 mb-8-->
+                <iframe src="https://drive.google.com/file/d/1txBgYXZBDATZnc48cxoUN1WFjW_xg341/preview" class="w-72 h-96 bg-grey-200 mt-8 mx-24 mb-8" width="640" height="480" allow="autoplay"></iframe>
+            </div>
+        </section>
+        <section class="bg-velo-kaki p-4 flex flex-col items-center overflow-x-hidden" id="Galerie">
+            <h3 class="text-lg lg:text-2xl font-bold border-b-4 border-black px-4 py-4 pt-8 mb-6 text-center" style="text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);">Galerie</h3>
+
+            <div class="logos">
+                <div class="logos-slide flex flex-row justify-start items-center lg:h-64 h-48" id="scroll-container">
+                    <img src="./images/velo_food_one.jpg" alt="" class="w-48 h-48 object-contain">
+                    <img src="./images/velo_food_two.jpg" alt="" class="w-48 h-48 object-contain">
+                    <img src="./images/velo_food_three.jpg" alt="" class="w-48 h-48 object-contain">
+                    <img src="./images/velo_food_four.jpg" alt="" class="w-48 h-48 object-contain">
+                    <img src="./images/velo_food_four.jpg" alt="" class="w-48 h-48 object-contain">
+                </div>
+            </div>
+        </section>
+        <section class="p-4 text-white flex flex-col items-center" id="section-grad-2">
+            <h3 class="text-lg lg:text-2xl font-bold border-b-4 border-white px-4 py-4 text-center mb-10" style="text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);">Reservierung</h3>
+
+            <div class="h-60 w-60 bg-velo-kaki rounded mb-12">
+
+            </div>
+        </section>
+        <section>
+
+        </section>
+        <section class="bg-velo-kaki flex flex-col items-center lg:flex-row lg:justify-around lg:px-48" id="News">
+            <a href="/tex-mex-abend"><div class="card bg-calm-green h-96 w-64 rounded m-4 mt-12 lg:my-12">
+                <div class="card-header">
+                    <img src="./images/tex-mex-abend.png" alt="" class="h-full w-full">
+                </div>
+                <div class="card-body text-white flex flex-col items-start justify-start border-t border-white">
+                    <h2 class="lg:text-lg px-4 mt-4 leading-6">Tex-Mex-Abend</h2>
+                    <h3 class="lg:text-md px-4 leading-6">Hamburger for Everyone!</h3>
+                    <h4 class="lg:text-sm px-4 leading-6">Date: 25.10.2024</h4>
+                    <p class="lg:text-xs p-4">Liebe Gäste, ein weiterer Velo-Abend ist in Planung. Wir laden euch herzlich zu unserem Tex-Mex-Abend am Freitag den 02. Februar ein.</p>
+                </div>
+            </div></a>
+            <div class="card bg-calm-green h-96 w-64 rounded m-4 lg:my-12"></div>
+            <div class="card bg-calm-green h-96 w-64 rounded m-4 mb-12 lg:my-12"></div>
+        </section>
+        <section class="text-white flex flex-col items-center p-4" id="section-grad-3">
+            <h3 class="text-lg lg:text-2xl font-bold border-b-4 border-white px-4 py-4 text-center mb-10">Kontakt</h3>
+            <div class="mb-10">
+                <p class="text-center">VELO Veganes Restaurant: Eichgasse 14, 74072 Heilbronn</p>
+                <p class="text-center">Telefon: +49 7131 7905907</p>
+                <p class="text-center">Öffnungszeiten: ab 21.5.2024: Montag bis Freitag 10:00-22:00 Uhr</p>
+            </div>
+            <div class="mb-10">
+                <p class="text-center font-bold">An gesetzlichen Feiertagen haben wir geschlossen</p>
+            </div>
+            <div class="mb-12">
+                <p class="text-center">Unsere neuen Essenszeiten sind:</p>
+                <p class="text-center">Frühstück: bis 12:00 Uhr</p>
+                <p class="text-center">Mittagstisch: von 12:00-14:00 Uhr</p>
+                <p class="text-center">Nachmittag/Abend: ab 14:00 Uhr bis 21 Uhr</p>
+            </div>
+        </section>
+        <footer class="bg-footer-green flex justify-center align-center text-white p-4">
+            <p>©Velo  |  Impressum  |  Datenschutz</p>
+        </footer>
+        <script src="./js/index.js"></script>
+        <script src="./js/nav.js"></script>
+    </main>
+</body>
+
+</html>

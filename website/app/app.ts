@@ -11,9 +11,13 @@ const port = process.env.PORT || 3000;
 // Serve static files from the `src` folder
 app.use(express.static(path.join(__dirname, 'src')));
 
+// app.get("/", (req: Request, res: Response) => {
+//   res.sendFile(path.join(__dirname, 'index.html'));
+// });
+
 app.get("/", (req: Request, res: Response) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
-});
+  res.render('index.ejs');
+})
 
 app.get("/tex-mex-abend", (req: Request, res: Response) => {
   res.render('tex-mex.ejs');

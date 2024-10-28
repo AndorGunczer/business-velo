@@ -10,7 +10,18 @@ services:
       - ${PWD}/website/app:/app/website
     networks:
       static-network:
-        ipv4_address: 192.168.10.2
+        ipv4_address: ${IPV4_WEBSITE}
+  mariadb:
+    image: mariadb:latest
+    container_name: mariadb-compose
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PW}
+      MYSQL_DATABASE: ${MYSQL_DB}
+    expose:
+      - "3306"
+    networks:
+      static-network:
+        ipv4_address: ${IPV4_DATABASE}
 
 networks:
   static-network:
