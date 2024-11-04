@@ -25,7 +25,7 @@ window.addEventListener("scroll", function () {
         console.error("ERROR: checkResult failed. Are all elements being set?");
         return;
     }
-    console.log(hamburgerLines);
+    // console.log(hamburgerLines);
     // console.log(scrollPosition);
     if (scrollPosition > 72) {
         imgElement.setAttribute("class", "img-fixed h-16 w-24 pl-8 py-4");

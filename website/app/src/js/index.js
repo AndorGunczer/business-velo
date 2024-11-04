@@ -20,18 +20,18 @@ function imageCarousel() {
         const containerCenter = scrollContainer.offsetWidth / 2;
         const scrollOffset = scrollContainer.scrollLeft;
         images.forEach((img) => {
-            console.log(`IMAGE: ${img}`);
+            // console.log(`IMAGE: ${img}`);
             let positionOfImg = img.getBoundingClientRect();
             const containerRect = scrollContainer.getBoundingClientRect();
             const imgCenter = (positionOfImg.left + positionOfImg.width / 2) - (containerRect.left); //+ scrollOffset
             // Calculate offset from the container's center
             const offsetFromCenter = Math.abs(containerCenter - imgCenter);
-            console.log(`OFFSET FROM CENTER: ${offsetFromCenter}`);
+            // console.log(`OFFSET FROM CENTER: ${offsetFromCenter}`);
             const maxDistance = scrollContainer.offsetWidth / 2; // Max possible distance from center
-            console.log(`MAX DISTANCE: ${maxDistance}`);
+            // console.log(`MAX DISTANCE: ${maxDistance}`);
             // Calculate scaling factor based on the offset
             let scaleFactor = maxScale - (offsetFromCenter / maxDistance) * (maxScale - minScale);
-            console.log(scaleFactor);
+            // console.log(scaleFactor);
             // Ensure scale factor stays within the minScale and maxScale range
             scaleFactor = Math.max(minScale, Math.min(maxScale, scaleFactor));
             // Apply scaling to the image size

@@ -15,10 +15,14 @@ services:
     image: mariadb:latest
     container_name: mariadb-compose
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_PW}
-      MYSQL_DATABASE: ${MYSQL_DB}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
     expose:
       - "3306"
+    volumes:
+      - ./database/script/database-init.sh:/docker-entrypoint-initdb.d/database-init.sh
+      - ./database/files/my.cnf:/root/.my.cnf
+    # entrypoint: ["./database-init.sh"]
     networks:
       static-network:
         ipv4_address: ${IPV4_DATABASE}
