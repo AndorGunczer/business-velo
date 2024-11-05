@@ -1,3 +1,84 @@
+// const { populate } = require("dotenv");
+
+// HOUR VIEW 4x6 matrix
+
+const hourList = document.querySelector("ul.hours");
+const startHour = 10 * 60; // Start from 10:00 in minutes
+const totalIntervals = 96;  // Total intervals for 24 hours with 15-minute increments
+const intervalsPerView = 24; // Number of intervals to display per view (4 hours)
+let currentStartInterval = startHour;
+
+// Format minutes into HH:MM
+function formatTime(minutes) {
+    const hour = Math.floor(minutes / 60) % 24;
+    const minute = minutes % 60;
+    return `${hour < 10 ? "0" : ""}${hour}:${minute === 0 ? "00" : minute}`;
+}
+
+// Populate hours based on the current start time
+function populateHours() {
+    hourList.innerHTML = ""; // Clear any existing content
+
+    for (let i = 0; i < intervalsPerView; i++) {
+        const minutes = currentStartInterval + i * 15;
+        const formattedTime = formatTime(minutes);
+        
+        const li = document.createElement("li");
+        li.textContent = formattedTime;
+        hourList.appendChild(li);
+    }
+}
+
+// Button event listeners for "Earlier" and "Later"
+document.getElementById("prev-hours").addEventListener("click", () => {
+    if (currentStartInterval > 0) {
+        currentStartInterval -= intervalsPerView * 15;
+        populateHours();
+    }
+});
+
+document.getElementById("next-hours").addEventListener("click", () => {
+    if (currentStartInterval + intervalsPerView * 15 < totalIntervals * 15) {
+        currentStartInterval += intervalsPerView * 15;
+        populateHours();
+    }
+});
+
+// Initial call to populate the list
+populateHours();
+
+hourList.addEventListener("click", (event) => {
+    // console.log(target);
+
+    if (event.target.tagName.toLowerCase() === "li") {
+        // Remove "active" class from any currently active li in .calendar ul
+        const activeItem = hourList.querySelector(".active");
+        if (activeItem) activeItem.classList.remove("active");
+
+        // Add "active" class to the clicked li
+        event.target.classList.add("active");
+    }
+})
+
+const spotTag = document.getElementsByClassName("spots")[0];
+
+spotTag.addEventListener("click", (event) => {
+    // console.log(target);
+
+    if (event.target.tagName.toLowerCase() === "li") {
+        // Remove "active" class from any currently active li in .calendar ul
+        const activeItem = spotTag.querySelector(".active");
+        if (activeItem) activeItem.classList.remove("active");
+
+        // Add "active" class to the clicked li
+        event.target.classList.add("active");
+        currentStartInterval = startHour;
+        populateHours();
+    }
+})
+
+// DAY VIEW
+
 const currentDate = document.querySelector(".current-date"),
       daysTag = document.querySelector(".days"),
       prevNextIcon = document.querySelectorAll(".icons img");
@@ -58,5 +139,22 @@ prevNextIcon.forEach(icon => {
             currYear++;
         }
         renderCalendar();
+        currentStartInterval = startHour;
+        populateHours();
     });
 });
+
+daysTag.addEventListener("click", (event) => {
+    // console.log(target);
+
+    if (event.target.tagName.toLowerCase() === "li") {
+        // Remove "active" class from any currently active li in .calendar ul
+        const activeItem = daysTag.querySelector(".active");
+        if (activeItem) activeItem.classList.remove("active");
+
+        // Add "active" class to the clicked li
+        event.target.classList.add("active");
+        currentStartInterval = startHour;
+        populateHours();
+    }
+})

@@ -1,2 +1,29 @@
 build tailwindcss: npx tailwindcss -i ./styles/style.css -o ./styles/output.css --watch
 build server: npx ts-node ./app.ts  
+
+hours per slot = 24
+
+                                <li class="inactive">10:00</li>
+                                <li>10:15</li>
+                                <li>10:30</li>
+                                <li>10:45</li>
+                                <li>11:00</li>
+                                <li>11:15</li>
+                                <li>11:30</li>
+                                <li>11:45</li>
+                                <li class="active">12:00</li>
+                                <li>12:15</li>
+                                <li>12:30</li>
+                                <li>12:45</li>
+                                <li>12:15</li>
+                                <li>12:30</li>
+                                <li>12:45</li>
+                                <li>12:15</li>
+                                <li>12:30</li>
+                                <li>12:45</li>
+                                <li>12:15</li>
+                                <li>12:30</li>
+                                <li>12:45</li>
+                                <li>12:15</li>
+                                <li>12:30</li>
+                                <li>12:45</li>
