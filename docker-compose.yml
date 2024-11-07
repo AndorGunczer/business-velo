@@ -1,3 +1,12 @@
+volumes:
+  mariadb_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${PWD}/data/mariadb
+
+
 services:
   website:
     container_name: website
@@ -12,17 +21,18 @@ services:
       static-network:
         ipv4_address: ${IPV4_WEBSITE}
   mariadb:
-    image: mariadb:latest
+    # image: mariadb:latest
     container_name: mariadb-compose
+    build:
+      context: ./database
+      dockerfile: Dockerfile
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
     expose:
       - "3306"
     volumes:
-      - ./database/script/database-init.sh:/docker-entrypoint-initdb.d/database-init.sh
-      - ./database/files/my.cnf:/root/.my.cnf
-    # entrypoint: ["./database-init.sh"]
+      - mariadb_data:/var/lib/mysql
     networks:
       static-network:
         ipv4_address: ${IPV4_DATABASE}

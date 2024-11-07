@@ -1,0 +1,44 @@
+Load Data from File: https://mariadb.com/kb/en/how-to-quickly-insert-data-into-mariadb/
+
+Possible query:
+
+async function areAll2SeatedTablesReserved(floor, startDate, endDate) {
+  const connection = await mysql.createConnection(dbConfig);
+  
+  try {
+    const [rows] = await connection.execute(`
+      SELECT COUNT(tables.id) AS total_tables,
+             COUNT(reservations.id) AS reserved_tables
+      FROM Tische AS tables
+      JOIN TischTyp AS table_types ON tables.tischtyp_id = table_types.id
+      JOIN Gebäude AS buildings ON tables.gebäude_id = buildings.id
+      LEFT JOIN Reservierungen AS reservations ON tables.id = reservations.tisch_id
+        AND reservations.reserv_start < ?
+        AND reservations.reserv_end > ?
+      WHERE table_types.plätze = 2
+        AND buildings.name = ?;
+    `, [endDate, startDate, floor]);
+
+    const totalTables = rows[0].total_tables;
+    const reservedTables = rows[0].reserved_tables;
+
+    // Check if all tables are reserved
+    return totalTables > 0 && totalTables === reservedTables;
+  } finally {
+    await connection.end();
+  }
+}
+
+// Usage example:
+const startDate = '2024-11-05 18:00:00'; // Example start date
+const endDate = '2024-11-05 21:00:00'; // Example end date
+
+areAll2SeatedTablesReserved('Oben', startDate, endDate).then(allReserved => {
+  if (allReserved) {
+    console.log("All 2-seated tables on the floor are reserved during the specified time.");
+  } else {
+    console.log("Some 2-seated tables on the floor are available during the specified time.");
+  }
+}).catch(error => {
+  console.error("Error checking table reservations:", error);
+});
