@@ -27,3 +27,14 @@ hours per slot = 24
                                 <li>12:15</li>
                                 <li>12:30</li>
                                 <li>12:45</li>
+
+                                1467  npm i -D @types/express@4
+                                1468  ls
+                                1469  bash launch.sh
+                                1470  ls
+                                1471  bash launch.sh
+                                1472  bash launch.sh
+                                1473  bash launch.sh
+                                1474  npm i mysql2/promise
+                                1475  npm i mysql2
+                                1476  bash launch.sh

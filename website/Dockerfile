@@ -12,7 +12,8 @@ RUN ssh-keygen -A
 
 # install app related software
 RUN apt-get install npm -y
-RUN npm i typescript --save-dev
+RUN npm i typescript mysql2 --save-dev
+RUN npm i -D @types/express@4
 RUN npm i express ejs ts-node
 
 # install host related software
