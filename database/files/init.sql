@@ -64,3 +64,6 @@ INSERT INTO Reservierungen (tisch_id, reserv_start, reserv_end, status)
 VALUES 
     (1, '2024-11-10 12:00:00', '2024-11-10 14:00:00', 'confirmed'),
     (2, '2024-11-10 15:00:00', '2024-11-10 17:00:00', 'pending');
+
+
+-- INSERT INTO Reservierungen (tisch_id, reserv_start, reserv_end, status) VALUES  (4, '2024-11-10 12:00:00', '2024-11-10 14:00:00', 'confirmed'),(5, '2024-11-10 12:00:00', '2024-11-10 14:00:00', 'confirmed');
