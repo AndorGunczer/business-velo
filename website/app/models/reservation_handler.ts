@@ -25,7 +25,34 @@ const dbConfig = {
   port: "3306",
 };
 
-// Function to check if all 2-seated tables are reserved
+// Function to check if all 2-seated tables are reserved QUERY WORKS
+// async function areAll2SeatedTablesReserved(floor: string, startDate: string, endDate: string) {
+//   const connection = await mysql.createConnection(dbConfig);
+  
+//   try {
+//     const [rows] = await connection.execute(`
+//       SELECT COUNT(tables.id) AS total_tables,
+//              COUNT(reservations.id) AS reserved_tables
+//       FROM Tische AS tables
+//       JOIN TischTyp AS table_types ON tables.tischtyp_id = table_types.id
+//       JOIN Gebäude AS buildings ON tables.gebäude_id = buildings.id
+//       LEFT JOIN Reservierungen AS reservations ON tables.id = reservations.tisch_id
+//         AND reservations.reserv_start < ?
+//         AND reservations.reserv_end > ?
+//       WHERE table_types.plätze = 2
+//         AND buildings.name = ?;
+//     `, [endDate, startDate, floor]);
+
+//     const totalTables = rows[0].total_tables;
+//     const reservedTables = rows[0].reserved_tables;
+
+//     return totalTables > 0 && totalTables === reservedTables;
+//   } finally {
+//     await connection.end();
+//   }
+// }
+
+// Function to check if all 2-seated tables are reserved JSON DEVELOPMENT
 async function areAll2SeatedTablesReserved(floor: string, startDate: string, endDate: string) {
   const connection = await mysql.createConnection(dbConfig);
   

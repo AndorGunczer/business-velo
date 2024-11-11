@@ -38,3 +38,22 @@ hours per slot = 24
                                 1474  npm i mysql2/promise
                                 1475  npm i mysql2
                                 1476  bash launch.sh
+
+RECENT BUG: 
+
+website          | [server]: Server is running at http://localhost:3000
+website          | /app/website/app.ts:4
+website          | import dotenv from "dotenv";
+website          |            ^
+website          | SyntaxError: Unexpected token u in JSON at position 0
+website          |     at JSON.parse (<anonymous>)
+website          |     at /app/website/app.ts:60:26
+website          |     at Generator.next (<anonymous>)
+website          |     at /app/website/app.ts:8:71
+website          |     at new Promise (<anonymous>)
+website          |     at __awaiter (/app/website/app.ts:4:12)
+website          |     at /app/website/app.ts:57:71
+website          |     at Layer.handle [as handle_request] (/app/website/node_modules/express/lib/router/layer.js:95:5)
+website          |     at next (/app/website/node_modules/express/lib/router/route.js:149:13)
+website          |     at Route.dispatch (/app/website/node_modules/express/lib/router/route.js:119:3)
+website exited with code 1

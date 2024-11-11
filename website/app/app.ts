@@ -2,6 +2,7 @@
 import path from 'path';
 import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
+var bodyParser = require('body-parser')
 const { areAll2SeatedTablesReserved } = require('./models/reservation_handler');
 
 dotenv.config();
@@ -16,6 +17,12 @@ app.use(express.static(path.join(__dirname, 'src')));
 //   res.sendFile(path.join(__dirname, 'index.html'));
 // });
 
+// create application/json parser
+var jsonParser = bodyParser.json()
+ 
+// create application/x-www-form-urlencoded parser
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+
 app.get("/", (req: Request, res: Response) => {
   res.render('index.ejs');
 })
@@ -24,17 +31,55 @@ app.get("/tex-mex-abend", (req: Request, res: Response) => {
   res.render('tex-mex.ejs');
 });
 
-app.get('/check-reservations', async (req: Request, res: Response) => {
-  // Get query parameters from the request
-  const { floor, startDate, endDate } = req.query;
+// app.get('/check-reservations', async (req: Request, res: Response) => {
+//   // Get query parameters from the request
+//   const { floor, startDate, endDate } = req.query;
 
-  if (!floor || !startDate || !endDate) {
+//   if (!floor || !startDate || !endDate) {
+//     return res.status(400).json({ error: "Please provide floor, startDate, and endDate query parameters" });
+//   }
+
+//   try {
+//     // Call the function to check reservations
+//     const allReserved = await areAll2SeatedTablesReserved(floor, startDate, endDate);
+    
+//     if (allReserved) {
+//       res.json({ message: "All 2-seated tables on the floor are reserved during the specified time." });
+//     } else {
+//       res.json({ message: "Some 2-seated tables on the floor are available during the specified time." });
+//     }
+//   } catch (error) {
+//     console.error("Error checking table reservations:", error);
+//     res.status(500).json({ error: "An error occurred while checking reservations." });
+//   }
+// });
+
+interface CalendarRequest {
+  floor: string;
+  startDate: string;
+  endDate: string;
+  personen: string;
+};
+
+app.post("/check-reservations", jsonParser, async (req: Request, res: Response) => {
+  // Get query parameters from the request
+  // const { floor, startDate, endDate } = req.query;
+  console.log(req.body);
+  const json = req.body;
+  // const json: any = JSON.parse(req.body);
+  const floor: string = json.floor;
+
+  // // date format: 2024-11-10T14:00:00 {yyyy-mm-ddThh:mm:ss}
+  // const startDate: string = `${json.year}-${json.month}-${json.day}T${json.hour}:00`;
+  // const endDate: string = `${json.year}-${json.month}-${json.day}T${((json.hour).split(":")[0] + 2)}:${(json.hour).split(":")[1]}:00`;
+
+  if (!floor || !json.startDate || !json.endDate) {
     return res.status(400).json({ error: "Please provide floor, startDate, and endDate query parameters" });
   }
 
   try {
     // Call the function to check reservations
-    const allReserved = await areAll2SeatedTablesReserved(floor, startDate, endDate);
+    const allReserved = await areAll2SeatedTablesReserved(floor, json.startDate, json.endDate);
     
     if (allReserved) {
       res.json({ message: "All 2-seated tables on the floor are reserved during the specified time." });
