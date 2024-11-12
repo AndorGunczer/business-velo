@@ -1561,6 +1561,8 @@ header>div {
 .popup-card-akzeptiert {
   display:flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -1572,6 +1574,17 @@ header>div {
   background-color:  #EAE2D7;
   border: black 4px solid;
   border-radius: 30px;
+}
+
+.form-div {
+  display: flex;
+  flex-direction: row;
+  padding: 12px 12px;
+  margin-bottom: 12px;
+}
+
+.form-div > label {
+  display: inline-block;
 }
 
 @media (max-width: 768px) {
