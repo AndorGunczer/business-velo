@@ -55,6 +55,9 @@ CREATE TABLE Reservierungen (
     reserv_start DATETIME,
     reserv_end DATETIME,
     reserv_created DATETIME DEFAULT CURRENT_TIMESTAMP,
+    vorname VARCHAR(50),
+    nachname VARCHAR(50),
+    telefon VARCHAR(50),
     status VARCHAR(50),
     FOREIGN KEY (tisch_id) REFERENCES Tische(id)
 );

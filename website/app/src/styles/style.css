@@ -653,3 +653,44 @@ header>div {
         margin-left: -125px;
     }
 }
+
+/* reveal animations */
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+    overflow: hidden;
+}
+
+.reveal.show {
+    transform: translateY(0px);
+    opacity: 1;
+    overflow: hidden;
+}
+
+.reveal-left {
+    position: relative;
+    transform: translateX(500px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal-left.show {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.reveal-right {
+    position: relative;
+    transform: translateX(-500px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal-right.show {
+    transform: translateX(0);
+    opacity: 1;
+
+}

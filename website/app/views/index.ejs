@@ -9,7 +9,7 @@
     <title>Velo</title>
 </head>
 
-<body class="box-border">
+<body class="box-border overflow-y-hidden">
     <header class="lg:header-lg text-white flex flex-col">
         <div class="flex flex-col content-center lg:items-center shadow-2xl overflow-x-hidden">
             <div id="mobile-nav-wrapper" class="block lg:hidden h-20 w-full overflow-x-hidden relative">
@@ -58,26 +58,26 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class="overflow-y-hidden">
         <section class="bg-velo-kaki p-8 text-center text-lg lg:relative lg:h-96" id="Gutschein">
             <img src="./images/section1_1.jpg" class="lg:inline-block hidden absolute top-0 left-0 w-2/6 h-96 z-20" alt="">
             <h3 class="opacity-65 lg:absolute lg:inset-x-0 lg:top-32 lg:my-0 my-8 lg:z-30 lg:text-2xl font-bold" style="text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);">Ein komplettes Geschmackserlebnis für euch alle!</h3>
             <a href="https://www.gurado.de/velo/"><button class="transform hover:bg-velo-blue transition duration-400 hover:border-white hover:text-white lg:absolute lg:inset-x-0 lg:top-52 lg:mb-0 mb-8 lg:ml-auto lg:mr-auto lg:z-30 bg-velo-kaki self-center p-2 w-32 lg:w-40 border-4 border-black rounded-2xl">Gutschein Kaufen!</button></a>
             <img src="./images/section1_2.jpg" class="lg:inline-block hidden absolute top-0 right-0 w-2/6 h-96 z-20" alt="">
         </section>
-        <section class="flex flex-col lg:flex-row items-center lg:items-start overflow-x-hidden" id="section-grad-1"> <!--class="flex flex-col lg:flex-row items-center lg:items-start" -->
-            <div class="flex flex-col items-center mt-8 lg:my-8 lg:w-2/4"> <!--flex flex-col items-center mt-8 lg:my-8 lg:w-2/4-->
+        <section class="flex flex-col lg:flex-row items-center lg:items-start overflow-hidden" id="section-grad-1"> <!--class="flex flex-col lg:flex-row items-center lg:items-start" -->
+            <div class="flex flex-col items-center mt-8 lg:my-8 lg:w-2/4 reveal"> <!--flex flex-col items-center mt-8 lg:my-8 lg:w-2/4-->
                 <h2 class="text-white text-lg lg:text-2xl font-bold border-b-4 px-4 py-4">Lorem Ipsum</h2> <!--text-white text-lg lg:text-2xl font-bold border-b-4 px-4 py-4-->
                 <p class="text-white p-8 text-center lg:text-start">Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum loreum ipsum lorem ipsum lorem ipsu lorem ipsum</p> <!--text-white p-8 text-center lg:text-start-->
             </div>
-            <div class="lg:w-2/4 lg:flex lg:flex-col lg:items-center lg:border-l-4 lg:my-8 mb-8"> <!--lg:w-2/4 lg:flex lg:flex-col lg:items-center lg:border-l-4 lg:my-8 mb-8-->
-                <!-- <iframe src="https://drive.google.com/file/d/1txBgYXZBDATZnc48cxoUN1WFjW_xg341/preview" class="w-72 h-96 bg-grey-200 mt-8 mx-24 mb-8" width="640" height="480" allow="autoplay"></iframe> -->
+            <div class="lg:w-2/4 lg:flex lg:flex-col lg:items-center lg:border-l-4 lg:my-8 mb-8 reveal"> <!--lg:w-2/4 lg:flex lg:flex-col lg:items-center lg:border-l-4 lg:my-8 mb-8-->
+                <iframe src="https://drive.google.com/file/d/1txBgYXZBDATZnc48cxoUN1WFjW_xg341/preview" class="w-72 h-96 bg-grey-200 mt-8 mx-24 mb-8" width="640" height="480" allow="autoplay"></iframe>
             </div>
         </section>
-        <section class="bg-velo-kaki p-4 flex flex-col items-center overflow-x-hidden" id="Galerie">
+        <section class="bg-velo-kaki p-4 flex flex-col items-center overflow-x-hidden overflow-hidden" id="Galerie">
             <h3 class="text-lg lg:text-2xl font-bold border-b-4 border-black px-4 py-4 pt-8 mb-6 text-center" style="text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);">Galerie</h3>
 
-            <div class="logos">
+            <div class="logos reveal">
                 <div class="logos-slide flex flex-row justify-start items-center lg:h-64 h-48" id="scroll-container">
                     <img src="./images/velo_food_one.jpg" alt="" class="w-48 h-48 object-contain">
                     <img src="./images/velo_food_two.jpg" alt="" class="w-48 h-48 object-contain">
@@ -180,6 +180,7 @@
         <script src="./js/nav.js"></script>
         <script src="./js/calendar.js"></script>
         <script src="./js/reservation_frontend.js"></script>
+        <script src="./js/reveal.js"></script>
     </main>
 </body>
 
