@@ -587,6 +587,11 @@ video {
   margin-right: 6rem;
 }
 
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -633,8 +638,16 @@ video {
   margin-top: 3rem;
 }
 
+.mt-24 {
+  margin-top: 6rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .mt-8 {
@@ -905,8 +918,17 @@ video {
   text-align: center;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 .text-lg {
   font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
@@ -916,6 +938,11 @@ video {
 
 .leading-6 {
   line-height: 1.5rem;
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -992,6 +1019,7 @@ header>div {
 
 /* Speisekarte */
     {
+  overflow: hidden;
   background: rgb(0, 115, 0);
   background: linear-gradient(180deg, rgba(0, 115, 0, 1) 0%, rgba(79, 115, 79, 1) 100%);
 }
@@ -1004,6 +1032,10 @@ header>div {
 #section-grad-3 {
   background: rgb(81, 104, 81);
   background: linear-gradient(180deg, rgba(81, 104, 81, 1) 0%, rgba(56, 65, 56, 1) 100%);
+}
+
+#Galerie {
+  overflow: hidden;
 }
 
 #scroll-container {
@@ -1603,7 +1635,7 @@ header>div {
   position: relative;
   transform: translateY(150px);
   opacity: 0;
-  transition: all 2s ease;
+  transition: all 1s ease;
   overflow: hidden;
 }
 
@@ -1614,26 +1646,26 @@ header>div {
 }
 
 .reveal-left {
-  position: relative;
-  transform: translateX(500px);
+  /* position: relative; */
+  left: -150px;
   opacity: 0;
-  transition: all 2s ease;
+  transition: all 1s ease;
 }
 
 .reveal-left.show {
-  transform: translateX(0px);
+  left: 0px;
   opacity: 1;
 }
 
 .reveal-right {
-  position: relative;
-  transform: translateX(-500px);
+  /* position: relative; */
+  right: -150px;
   opacity: 0;
-  transition: all 2s ease;
+  transition: all 1s ease;
 }
 
 .reveal-right.show {
-  transform: translateX(0);
+  right: 0px;
   opacity: 1;
 }
 
@@ -1676,6 +1708,15 @@ header>div {
 
   .lg\:z-30 {
     z-index: 30;
+  }
+
+  .lg\:m-12 {
+    margin: 3rem;
+  }
+
+  .lg\:mx-24 {
+    margin-left: 6rem;
+    margin-right: 6rem;
   }
 
   .lg\:my-0 {
@@ -1797,6 +1838,11 @@ header>div {
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .lg\:text-lg {

@@ -10,7 +10,7 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 service nginx start
 
 cd /app/website
-
+npx tailwindcss -i ./src/styles/style.css -o ./src/styles/output.css --watch
 npx ts-node ./app.ts
 
 # tail -f /dev/null
