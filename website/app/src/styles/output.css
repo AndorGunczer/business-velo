@@ -1631,17 +1631,30 @@ header>div {
 
 /* reveal animations */
 
+@keyframes revealAnimation {
+  from {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
 .reveal {
-  position: relative;
   transform: translateY(150px);
+  /* Ensure the starting position is set */
   opacity: 0;
-  transition: all 1s ease;
+  /* Initial opacity */
+  position: relative;
+  animation: none;
   overflow: hidden;
 }
 
 .reveal.show {
-  transform: translateY(0px);
-  opacity: 1;
+  animation: revealAnimation 1s ease forwards;
   overflow: hidden;
 }
 
@@ -1649,7 +1662,7 @@ header>div {
   /* position: relative; */
   left: -150px;
   opacity: 0;
-  transition: all 1s ease;
+  transition: left 1s ease, opacity 1s ease;
 }
 
 .reveal-left.show {
@@ -1661,7 +1674,7 @@ header>div {
   /* position: relative; */
   right: -150px;
   opacity: 0;
-  transition: all 1s ease;
+  transition: right 1s ease, opacity 1s ease;
 }
 
 .reveal-right.show {
